@@ -60,4 +60,9 @@ export class CarsService {
       });
       return carDb;
    }
+
+   delete( id: string ) {
+      this.findById( id );
+      this.cars = this.cars.filter( car => car.id !== id );
+   }
 }
