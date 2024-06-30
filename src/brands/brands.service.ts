@@ -43,6 +43,7 @@ export class BrandsService {
         return brandDb = {
           ...brand,
           name: updateBrandDto.name.toLowerCase(),
+          updatedAt: new Date().getTime(),
         };
       }
       return brand;
